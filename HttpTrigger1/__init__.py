@@ -8,7 +8,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
     ##added
     ##connecting to VM
-    hostname = '104.43.169.106' # VIP = '10.3.1.4'
+    hostname = '10.3.1.4' # VIP = '10.3.1.4'
     port = 22
     username = 'yuran'
     password = 'Yuukochan!1979'
@@ -20,6 +20,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     s.connect(hostname, port, username, password)
     command = 'python3 hello.py'
     (stdin, stdout, stderr) = s.exec_command(command)
+    print("below is the content of hello.py")
     for line in stdout.readlines():
         print(line)
     s.close()
