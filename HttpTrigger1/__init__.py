@@ -8,21 +8,23 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
     ##added
     ##connecting to VM
-    hostname = '10.3.1.4' # VIP = '10.3.1.4'
+    
+    hostname = '10.3.1.4' # VIP = '10.3.1.4' plz edit this line
     port = 22
-    username = 'yuran'
-    password = 'Yuukochan!1979'
+    username = 'yuran' #plz edit this line
+    password = 'Yuukochan!1979' #plz edit this line
 
     
     s = paramiko.SSHClient()
     s.load_system_host_keys()
     s.set_missing_host_key_policy(AutoAddPolicy())
     s.connect(hostname, port, username, password)
-    command = 'python3 hello.py'
+    command = 'python3 hello.py' #plz edit this line
     (stdin, stdout, stderr) = s.exec_command(command)
     print("below is the content of hello.py")
     for line in stdout.readlines():
         print(line)
+        logging.info(line)
     s.close()
 
     name = req.params.get('name')
