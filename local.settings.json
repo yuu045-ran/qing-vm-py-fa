@@ -1,7 +1,9 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "",
-    "FUNCTIONS_WORKER_RUNTIME": "python"
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=funcgo7pdafbfngbg;AccountKey=f+pT09pEtQ+sak3GpR3V7e1oqn8+chw16RBgZZgJ7Tqw8nAXcyjMRoar7UlLlOfI444UG6WY7bZZO/rnCEn+QA==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "MyEventGridTopicUriSetting": "https://qing-eg-topic.southcentralus-1.eventgrid.azure.net/api/events",
+    "MyEventGridTopicKeySetting": "H6SAjI5QsxZ6N+bYhEAGGG2aSZv4utHR0B7o8czR5NI="
   }
 }
